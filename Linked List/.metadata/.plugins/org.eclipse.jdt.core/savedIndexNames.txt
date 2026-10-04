@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+D:\CDAC\Data Structures\Linked List\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3215979004.index
+958938282.index
+3615191595.index
+170012419.index
+3836746395.index

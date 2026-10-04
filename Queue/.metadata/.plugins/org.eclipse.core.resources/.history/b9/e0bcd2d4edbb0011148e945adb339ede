@@ -1,0 +1,69 @@
+package circularQueue;
+
+class CircularQueue{
+	private int queue[];
+	private int maxSize;
+	private int front;
+	private int rare;
+	private int countElement = 0;
+	
+	public CircularQueue(int maxSize) {
+		this.maxSize = maxSize;
+		this.queue = new int[maxSize];
+		this.front = 0;
+		this.rare = -1;
+		this.countElement = 0;
+	}
+	
+	public void enqueue(int data) {
+		if(countElement == maxSize) {
+			System.out.println("Queue is full.....");
+			return;
+		}
+		rare = (rare + 1) % maxSize;
+		queue[rare] = data;
+		countElement++;
+	}
+	
+	public int dequeue() {
+		if(countElement == 0) {
+			System.out.println("Queue is empty.....");
+			return -1;
+		}
+		
+		front = (front + 1) % maxSize;
+		int data = queue[front];
+		countElement--;
+		return data;
+	}
+	
+	public int peek() {
+		return queue[front];
+	}
+	
+	
+}
+
+public class CircularQueueDemo {
+
+	public static void main(String[] args) {
+		CircularQueue cirqueue = new CircularQueue(5);
+		
+		cirqueue.enqueue(10);
+		cirqueue.enqueue(20);
+		cirqueue.enqueue(30);
+		cirqueue.enqueue(40);
+		cirqueue.enqueue(50);
+		
+		System.out.println("Element removed: " + cirqueue.dequeue());
+		System.out.println("Element removed: " + cirqueue.dequeue());
+		
+		cirqueue.enqueue(60);
+		cirqueue.enqueue(70);
+		
+		System.out.println("Peek element: " + cirqueue.peek());
+		
+		
+	}
+
+}

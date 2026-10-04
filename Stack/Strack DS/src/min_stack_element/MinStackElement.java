@@ -1,0 +1,60 @@
+package min_stack_element;
+
+class Stack{
+	private int maxSize;
+	private int arr[];
+	private int top;
+	
+	public Stack(int maxSize) {
+		this.maxSize = maxSize;
+		this.arr = new int[maxSize];
+		this.top = -1;
+	}
+	
+	public void push(int data) {
+		if(top == maxSize - 1) {
+			System.out.println("Stack is full.....");
+		}
+		top++;
+		arr[top] = data;
+	}
+	
+	public int pop() {
+		if(top == -1) {
+			System.out.println("Stack is empty....");
+			return -1;
+		}
+		int data = arr[top];
+		top--;
+		return data;
+	}
+	
+	public int getMin() {
+		int min = arr[0];
+		for(int i = 1; i <= top; i++) {
+			if(arr[i] < min) {
+				min = arr[i];
+			}
+			
+		}
+		
+		return min;
+	}
+	
+}
+
+public class MinStackElement {
+
+	public static void main(String[] args) {
+		Stack stack = new Stack(5);
+		
+		stack.push(30);
+		stack.push(40);
+		stack.push(60);
+		stack.push(50);
+		stack.push(90);
+		
+		System.out.println(stack.getMin());
+	}
+
+}

@@ -1,0 +1,17 @@
+package rotate;
+
+public class Rotate90Anti {
+	
+	public static void 
+
+	public static void main(String[] args) {
+		int [] [] arr = {
+				{4,2,5},
+				{7,5,9},
+				{5,7,2}
+		};
+		
+
+	}
+
+}

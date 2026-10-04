@@ -1,0 +1,21 @@
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		int [] deck = {4,5,6,8,9,3};
+		int n = deck.length;
+		
+		for(int cardIndex = 1; cardIndex < n; cardIndex++) {
+			int cardPlace = deck[cardIndex];
+			int position = cardIndex - 1;
+			while(position >= 0 && deck[position] > cardPlace) {
+				deck[position + 1] = deck[position]; 
+				position--;
+			}
+			
+			deck[position] = cardPlace;
+		}
+
+	}
+
+}

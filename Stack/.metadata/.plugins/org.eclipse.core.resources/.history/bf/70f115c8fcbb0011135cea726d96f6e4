@@ -1,0 +1,10 @@
+package min_stack_element;
+
+public class MinStackElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

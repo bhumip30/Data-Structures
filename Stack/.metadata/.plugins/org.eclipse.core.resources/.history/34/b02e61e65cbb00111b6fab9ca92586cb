@@ -1,0 +1,14 @@
+package infixToProfix;
+
+public class PostfixCalculation {
+	
+	String PostfixExpression = "5+10*3";
+	System.out.println("Expression: " + PostfixExpression);
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

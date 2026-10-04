@@ -1,0 +1,28 @@
+package infixToProfix;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class InfixToPostfix {
+
+	//private static final String StringBilder postfix  = null;
+
+	public static void main(String[] args) {
+		String infixExpression = "A+B*C";
+		System.out.println("Expression: " + infixExpression);
+		System.out.println("Coversion Infix to Postfix: " +  infixToPostfix(infixExpression));
+
+	}
+	
+	public static String infixToPostfix(String infixExpression) {
+		
+		StringBuilder postfix = new StringBuilder();
+		Deque <Character> stack = new ArrayDeque<>();
+		
+		
+		
+		return infixExpression;
+		
+	}
+
+}

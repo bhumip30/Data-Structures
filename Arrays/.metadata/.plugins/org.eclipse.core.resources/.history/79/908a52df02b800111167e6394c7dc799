@@ -1,0 +1,10 @@
+package transpose;
+
+public class ArrayTranspose {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

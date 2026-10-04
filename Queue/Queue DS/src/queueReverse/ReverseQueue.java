@@ -1,0 +1,13 @@
+package queueReverse;
+class Queue{
+	
+}
+
+public class ReverseQueue {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

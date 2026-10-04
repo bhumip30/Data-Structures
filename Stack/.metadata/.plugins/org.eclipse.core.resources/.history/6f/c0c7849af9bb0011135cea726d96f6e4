@@ -1,0 +1,42 @@
+package infixToProfix;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class BracketCheck {
+
+	public static void main(String[] args) {
+		String bracketExpression = "{}()[]";
+		//String bracketExpression1 = "{[)}";
+		
+		System.out.println("Expression: " +  bracketExpression);
+		System.out.println(isBracketExpression( bracketExpression));
+
+	}
+	
+	public static boolean isBracketExpression(String brackeExpression) {
+		
+		Deque <Character> stack = new ArrayDeque<>();
+		
+		for(char c : brackeExpression.toCharArray()) {
+			if(c == '(' || c == '[' || c == '{') {
+				stack.push(c);
+			}else {
+
+					if(stack.isEmpty() ){
+						return false;
+					}
+					char top = stack.peek();
+					if((c == '(' && top != ')')) return false; 
+					if((c == '[' && top != ']')) return false;
+					if((c == '{' && top != '}')) return false;
+					}
+				}
+			}
+			
+		
+		
+		return stack.isEmpty();
+	}
+
+}
